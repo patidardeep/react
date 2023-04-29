@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 const index = () => {
 
 let [uname, setUname] = useState("Deepak")
-const [mydate, setMydate] = useState(new Date ().toLocaleTimeString());
+const [myclock, setMyclock] = useState(new Date ().toLocaleTimeString());
 
 
 setInterval(()=>{
-  setMydate(new Date().toLocaleTimeString())
+  setMyclock(new Date().toLocaleTimeString())
 },1000)
 
 const changehandler = () =>{
@@ -18,7 +18,7 @@ const changehandler = () =>{
   return (
     <div>
       <h1>{uname}</h1>
-      <h2>{mydate}</h2>
+      <h2>{myclock}</h2>
       <button onClick={changehandler}>Change Name</button>
     </div>
   )
